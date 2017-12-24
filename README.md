@@ -1,11 +1,17 @@
 react-app-rewire-sizeof
 =======================
 
-> Add [`sizeof-loader`](https://github.com/dashed/sizeof-loader) to a [`react-app-rewired`](https://github.com/timarney/react-app-rewired) config.
+> Rewire your [`create-react-app`](https://github.com/facebookincubator/create-react-app) project to replace [`url-loader`](https://github.com/webpack-contrib/url-loader) with [`sizeof-loader`](https://github.com/dashed/sizeof-loader).
 
 ## Install
 
-*TBA.*
+```sh
+$ yarn add react-app-rewire-sizeof
+# npm v5+
+$ npm install react-app-rewire-sizeof
+# before npm v5
+$ npm install --save react-app-rewire-sizeof
+```
 
 ## Usage
 

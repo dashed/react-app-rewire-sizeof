@@ -1,0 +1,52 @@
+{
+  "name": "react-app-rewire-sizeof",
+  "version": "0.1.0",
+  "description": "Rewire your `create-react-app` project to replace `url-loader` with `sizeof-loader`.",
+  "source": "src/index.js",
+  "module": "dist/index.es.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "repository": "https://github.com/dashed/react-app-rewire-sizeof",
+  "author": {
+    "name": "Alberto Leal",
+    "email": "mailforalberto@gmail.com",
+    "url": "github.com/dashed"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ]
+  },
+  "scripts": {
+    "build": "microbundle --compress=false",
+    "dev": "microbundle watch --compress=false",
+    "pretty": "prettier --write --tab-width 4 'src/**/*.js' 'test/**/*.js'",
+    "prepublish": "npm run lint && npm run test && npm run build",
+    "lint": "eslint src test",
+    "flow": "flow"
+  },
+  "keywords": [
+    "url-loader",
+    "sizeof-loader",
+    "react-app-rewired",
+    "webpack",
+    "create-react-app"
+  ],
+  "dependencies": {
+    "react-app-rewired": "^1.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.14.0",
+    "flow-bin": "^0.61.0",
+    "microbundle": "^0.2.4",
+    "prettier": "^1.9.2"
+  }
+}
