@@ -25,13 +25,16 @@ function identity<T>(x: T): T {
     return x;
 }
 
-const urlLoaderMatcher = function(rule): bool {
+const urlLoaderMatcher = function(rule): boolean {
     return loaderNameMatches(rule, "url-loader");
 };
 
 // rewire
 
-const rewireSizeofLoader = (config: ConfigType, options: OptionsType = {}): ConfigType => {
+const rewireSizeofLoader = (
+    config: ConfigType,
+    options: OptionsType = {}
+): ConfigType => {
     const { before = identity, after = identity } = options;
 
     config = before(config);
@@ -46,4 +49,4 @@ const rewireSizeofLoader = (config: ConfigType, options: OptionsType = {}): Conf
     return config;
 };
 
-module.exports = rewireSizeofLoader;
+export default rewireSizeofLoader;
